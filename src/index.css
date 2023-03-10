@@ -1,13 +1,130 @@
-body {
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+.App {
+  border-radius: 5px;
+  border-top: 1px solid #aaa9aa;
+  border-right: 1px solid #aaa9aa;
+  border-bottom: 1px solid #8ebdf6;
+  border-left: 1px solid #8ebdf6;
+  width: 600px;
+  min-height: 300px;
+  padding: 30px;
+  margin: 20px auto;
+}
+
+.tasks-container {
+  border: 1px solid grey;
+  padding: 20px;
+  border-radius: 5px;
+  max-height: 300px;
+  overflow: scroll;
+}
+
+.tasks-title {
+  font-weight: 500;
+  text-align: center;
+  margin: 20px;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e7e5e5;
+  padding: 10px 15px;
+  margin: 15px 0;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 1px solid grey;
+}
+
+.task h3 {
+  font-weight: 500;
+}
+
+.deleteIcon {
+  font-size: 1.2rem;
+  color: red;
+}
+
+.message {
+  text-align: center;
+  font-weight: 500;
+  color: red;
+  margin: 20px;
+}
+
+.task-form {
+  border: 1px solid grey;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #8ebdf6;
+  margin-bottom: 30px;
+}
+
+.form-task-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-task-control label {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.form-task-control ::placeholder {
+  font-size: 20px;
+  padding: 5px 0;
+}
+
+.form-task-control input {
+  padding: 10px 7px;
+  margin: 5px 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 5px;
+  border: 1px solid grey;
+  outline: none;
+}
+
+.form-task-control.form-reminder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+input.checkbox {
+  cursor: pointer;
+  margin: 10px auto;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+
+input.submit-btn {
+  padding: 12px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgb(134, 133, 133);
+  color: white;
+  border: none;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+input.submit-btn:hover {
+  background-color: black;
 }
